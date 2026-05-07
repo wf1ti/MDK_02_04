@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #222;
+}
+
+/* ── HEADER ── */
+header {
+  background: #1a1a1a;
+  position: relative;
+  overflow: hidden;
+  height: 56px;
+}
+
+/* Большой фоновый текст — за шапкой */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 0;
+  user-select: none;
+}
+
+/* Контент шапки поверх фонового текста */
+.header-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 52px;
+}
+
+/* ── NAV ── */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* ── LOGO ── */
+.logo-block {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.logo-id {
+  background: #fff;
+  color: #111;
+  padding: 3px 6px;
+  font-weight: 700;
+}
+
+.logo-bi {
+  background: #111;
+  color: #fff;
+  padding: 3px 6px;
+  font-weight: 700;
+  border: 1px solid #555;
+}
+
+/* ── PHONE ── */
+.phone-block {
+  display: flex;
+  align-items: center;
+}
+
+.phone-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* ── НИЖНЯЯ ПОЛОСА ── */
+.header-line {
+  position: relative;
+  z-index: 1;
+  height: 3px;
+  background: #fff;
+}

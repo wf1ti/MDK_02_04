@@ -1,0 +1,234 @@
+/* =====================================================
+   ИНФОУРОК — style.css  (с цветами)
+   ===================================================== */
+
+:root {
+  --blue:         #2563eb;
+  --blue-light:   #3b82f6;
+  --blue-dark:    #1d4ed8;
+  --orange:       #f97316;
+  --orange-light: #fb923c;
+  --bg:           #eff6ff;
+  --white:        #ffffff;
+  --dark:         #1e293b;
+  --mid:          #64748b;
+  --border:       #cbd5e1;
+  --border-focus: #3b82f6;
+  --radius:       10px;
+  --shadow:       0 8px 32px rgba(37, 99, 235, 0.15);
+
+  --font-head: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративные круги на фоне */
+.bg-circle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-circle--1 {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%);
+  top: -120px; left: -120px;
+}
+.bg-circle--2 {
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(249,115,22,0.13) 0%, transparent 70%);
+  bottom: -80px; right: -80px;
+}
+
+/* Карточка */
+.card {
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 32px 32px 36px;
+  width: 360px;
+  border-top: 4px solid var(--blue);
+}
+
+/* ===== ЛОГОТИП ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.logo__squares {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  width: 28px;
+  height: 28px;
+}
+
+.sq {
+  display: block;
+  border-radius: 3px;
+}
+.sq--tl { background: var(--orange);       opacity: 0.6; }
+.sq--tr { background: var(--blue);         opacity: 1;   }
+.sq--bl { background: var(--blue);         opacity: 1;   }
+.sq--br { background: var(--orange-light); opacity: 0.8; }
+
+.logo__text {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  color: var(--dark);
+}
+
+/* ===== ТАБЫ ===== */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 24px;
+}
+
+.tabs__btn {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  padding: 10px 22px;
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mid);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: color 0.2s, border-color 0.2s;
+  outline: none;
+}
+
+.tabs__btn--active {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
+}
+
+.tabs__btn:not(.tabs__btn--active):hover {
+  color: var(--dark);
+}
+
+/* ===== ФОРМА ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form__group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--dark);
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form__input::placeholder { color: #b0bec5; }
+
+.form__input:focus {
+  border-color: var(--border-focus);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Поле пароля */
+.form__group--password .form__input { padding-right: 46px; }
+
+.form__eye {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  outline: none;
+}
+.form__eye svg { width: 18px; height: 18px; }
+.form__eye:hover,
+.form__eye--active { color: var(--blue); }
+
+/* Ссылка "Забыли пароль?" */
+.form__forgot { margin-top: -4px; }
+
+.form__link {
+  font-size: 13px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+.form__link:hover { color: var(--blue-dark); }
+
+/* Кнопка Войти */
+.form__submit {
+  margin-top: 6px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: box-shadow 0.2s, transform 0.1s, background 0.2s;
+}
+
+.form__submit:hover {
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  transform: translateY(-1px);
+}
+
+.form__submit:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}

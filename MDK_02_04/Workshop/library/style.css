@@ -1,0 +1,111 @@
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f5f0eb;
+  color: #2c2c2c;
+  padding: 20px;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f0eb;
+  padding: 20px 30px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.header__left {
+  flex: 1;
+}
+
+.logo {
+  font-size: 52px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #1a1a2e;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 16px;
+  font-style: italic;
+  color: #555;
+  margin-top: 6px;
+}
+
+.header__right {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.header__phone {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===== СЕТКА КАРТОЧЕК ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 16px;
+  max-width: 900px;
+}
+
+/* Большая карточка справа занимает 2 строки */
+.card--large {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+}
+
+/* ===== КАРТОЧКА ===== */
+.card {
+  border: 1px solid #bbb;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card--large .card__img {
+  height: 100%;
+  min-height: 376px;
+}
+
+.card__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(80, 80, 80, 0.82);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}

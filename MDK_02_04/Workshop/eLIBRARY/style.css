@@ -1,0 +1,158 @@
+/* =====================================================
+   eLIBRARY — style.css
+   Фрагмент 3: Правила регистрации организаций
+   ===================================================== */
+
+:root {
+  --blue:         #1a56db;
+  --blue-light:   #e8f0fe;
+  --blue-dark:    #1140a8;
+  --orange:       #d97706;
+  --orange-light: #fef3c7;
+  --dark:         #1e293b;
+  --mid:          #475569;
+  --border:       #e2e8f0;
+  --bg:           #f1f5f9;
+  --white:        #ffffff;
+  --shadow:       0 4px 24px rgba(0,0,0,0.08);
+  --radius:       12px;
+
+  --font-head: 'Merriweather', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* ===== ШАПКА ===== */
+.site-header {
+  background: var(--blue);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 20px 32px;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-logo {
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+.site-logo__e   { color: #fbbf24; font-style: italic; }
+.site-logo__lib { color: #ffffff; }
+.site-logo__ru  { color: #93c5fd; font-size: 18px; }
+
+.site-header__desc {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  border-left: 2px solid rgba(255,255,255,0.3);
+  padding-left: 16px;
+}
+
+/* ===== ОСНОВНОЙ БЛОК ===== */
+.main {
+  background: var(--white);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.container { width: 100%; }
+
+/* ===== БЛОК ИНФОРМАЦИИ ===== */
+.info-block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 8px 0;
+  transition: background 0.2s;
+  border-radius: 8px;
+}
+
+.info-block:hover {
+  background: #f8fafc;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0 -8px;
+}
+
+/* Иконка-треугольник */
+.info-block__icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--blue-light);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.info-block__icon svg { width: 14px; height: 14px; }
+
+.info-block__icon--orange {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+/* Контент */
+.info-block__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-block__title {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+
+.info-block__text {
+  font-size: 14px;
+  color: var(--mid);
+  line-height: 1.75;
+  text-align: justify;
+}
+.info-block__text strong { color: var(--blue); font-weight: 600; }
+
+.info-block__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+  align-self: flex-start;
+}
+.info-block__link:hover { color: var(--blue-dark); text-decoration: underline; }
+
+/* Разделитель */
+.divider {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 24px 0;
+}

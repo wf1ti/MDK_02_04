@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма записи в библиотеку</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+    <div class="form-box">
+
+      <h1 class="form-box__title">Форма заявки на виртуальную запись в библиотеку</h1>
+
+      <form class="form" action="#" method="post">
+
+        <!-- СТРОКА 1: Имя / Отчество / Пол -->
+        <div class="form__row form__row--3col">
+          <div class="form__group">
+            <label class="form__label" for="name">Имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form__input"
+              placeholder="Имя"
+            >
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="patronymic">Отчество</label>
+            <input
+              type="text"
+              id="patronymic"
+              name="patronymic"
+              class="form__input"
+              placeholder="Отчество"
+            >
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="gender">Пол</label>
+            <select id="gender" name="gender" class="form__select">
+              <option value="male">Мужской</option>
+              <option value="female">Женский</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- СТРОКА 2: Email / Год рождения / Телефон -->
+        <div class="form__row form__row--email">
+          <div class="form__group form__group--wide">
+            <label class="form__label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder="Email"
+            >
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="birth">Год рождения</label>
+            <input
+              type="text"
+              id="birth"
+              name="birth"
+              class="form__input"
+              placeholder="например: 1990"
+              required
+            >
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">Номер телефона</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form__input"
+              placeholder="+7xxxxxxxxxx"
+            >
+          </div>
+        </div>
+
+        <!-- СТРОКА 3: Паспорт -->
+        <div class="form__row">
+          <div class="form__group form__group--passport">
+            <label class="form__label" for="passport">Серия и номер<br>паспорта</label>
+            <input
+              type="text"
+              id="passport"
+              name="passport"
+              class="form__input"
+              placeholder="XXXX XXXXXX"
+            >
+          </div>
+        </div>
+
+        <!-- ЧЕКБОКСЫ -->
+        <div class="form__checks">
+          <label class="form__check">
+            <input type="checkbox" name="agree1" class="form__checkbox">
+            <span>Я согласен с Правилами пользования библиотекой</span>
+          </label>
+          <label class="form__check">
+            <input type="checkbox" name="agree2" class="form__checkbox">
+            <span>Я несу ответственность за предоставленные данные</span>
+          </label>
+        </div>
+
+        <!-- КНОПКИ -->
+        <div class="form__buttons">
+          <button type="reset" class="form__btn form__btn--reset">Очистить</button>
+          <button type="submit" class="form__btn form__btn--submit">Записаться</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

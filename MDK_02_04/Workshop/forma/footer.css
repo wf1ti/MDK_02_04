@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f9f9f9;
+}
+
+footer {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── LEFT BLOCK ── */
+.left-block {
+  flex: 1;
+}
+
+.section-title {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+.address {
+  font-size: 14px;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.subscribe-title {
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #555;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.social-icon:hover {
+  background: #222;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ── RIGHT BLOCK (FORM) ── */
+.right-block {
+  flex: 1;
+}
+
+.form-title {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #f2f2f2;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  border-radius: 2px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+}
+
+form textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+form button {
+  align-self: flex-start;
+  padding: 12px 28px;
+  background: #fff;
+  border: 1px solid #333;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  color: #333;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+form button:hover {
+  background: #333;
+  color: #fff;
+}

@@ -1,0 +1,82 @@
+/* ===== СБРОС ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  color: #111;
+  padding: 20px;
+}
+
+/* ===== СПИСОК НОВОСТЕЙ ===== */
+.news-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ===== ОДНА НОВОСТЬ ===== */
+.news-item {
+  padding: 18px 0 14px;
+}
+
+/* --- Заголовок --- */
+.news-item__heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* --- Тело: картинка + текст рядом --- */
+.news-item__body {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.news-item__img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+}
+
+.news-item__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.news-item__text em {
+  font-style: italic;
+}
+
+/* --- Ссылка "Читать далее" --- */
+.news-item__footer {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.news-item__more {
+  font-size: 13px;
+  color: #0000cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.news-item__more:hover {
+  color: #0000aa;
+}
+
+/* ===== РАЗДЕЛИТЕЛЬ ===== */
+.news-divider {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 0;
+}

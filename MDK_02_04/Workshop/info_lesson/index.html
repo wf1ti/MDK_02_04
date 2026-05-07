@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Инфоурок — Вход</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Декоративные круги фона -->
+    <div class="bg-circle bg-circle--1"></div>
+    <div class="bg-circle bg-circle--2"></div>
+
+    <div class="card">
+
+      <!-- Логотип -->
+      <header class="logo">
+        <div class="logo__squares">
+          <span class="sq sq--tl"></span>
+          <span class="sq sq--tr"></span>
+          <span class="sq sq--bl"></span>
+          <span class="sq sq--br"></span>
+        </div>
+        <span class="logo__text">ИНФОУРОК</span>
+      </header>
+
+      <!-- Табы -->
+      <div class="tabs">
+        <button class="tabs__btn tabs__btn--active" id="tab-login">Вход</button>
+        <button class="tabs__btn" id="tab-register">Регистрация</button>
+      </div>
+
+      <!-- Форма -->
+      <form class="form" action="#" method="post" novalidate>
+
+        <div class="form__group">
+          <label class="form__label" for="email">Эл.почта</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@mail.ru"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form__group form__group--password">
+          <label class="form__label" for="password">Пароль</label>
+          <input
+            class="form__input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+          />
+          <button type="button" class="form__eye" id="togglePassword" aria-label="Показать пароль">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="form__forgot">
+          <a href="#" class="form__link">Забыли пароль?</a>
+        </div>
+
+        <button type="submit" class="form__submit">Войти</button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    toggleBtn.addEventListener('click', () => {
+      const show = passwordInput.type === 'password';
+      passwordInput.type = show ? 'text' : 'password';
+      toggleBtn.classList.toggle('form__eye--active', show);
+    });
+
+    document.getElementById('tab-login').addEventListener('click', function () {
+      this.classList.add('tabs__btn--active');
+      document.getElementById('tab-register').classList.remove('tabs__btn--active');
+    });
+    document.getElementById('tab-register').addEventListener('click', function () {
+      this.classList.add('tabs__btn--active');
+      document.getElementById('tab-login').classList.remove('tabs__btn--active');
+    });
+  </script>
+
+</body>
+</html>

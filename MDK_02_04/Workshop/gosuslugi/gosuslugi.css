@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f3f7ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── PAGE ── */
+.page {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── LOGIN BOX ── */
+.login-box {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* ── LOGO ── */
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.logo-gos {
+  color: #d52b1e;
+  font-weight: 700;
+}
+
+.logo-uslugi {
+  color: #0d4cd3;
+  font-weight: 700;
+}
+
+/* ── LANGUAGE ── */
+.lang {
+  margin-top: -6px;
+}
+
+.lang-link {
+  font-size: 14px;
+  color: #0d4cd3;
+  text-decoration: none;
+}
+
+.lang-link:hover {
+  text-decoration: underline;
+}
+
+/* ── FORM ── */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+.field-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d8e3f5;
+  border-radius: 6px;
+  background: #f3f7ff;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+  border-color: #0d4cd3;
+  background: #fff;
+}
+
+/* Restore link */
+.restore {
+  font-size: 14px;
+  color: #0d4cd3;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: -4px;
+}
+
+.restore:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 15px;
+  background: #0d4cd3;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #0a3ba8;
+}
+
+/* ── BOTTOM LINK ── */
+.link-trouble {
+  font-size: 14px;
+  color: #0d4cd3;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.link-trouble:hover {
+  text-decoration: underline;
+}

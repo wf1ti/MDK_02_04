@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мир Карика — Утро ворона</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Шапка серии -->
+    <div class="series-bar">
+      <span class="series-bar__title">МИР КАРИКА</span>
+      <span class="series-bar__menu">☰</span>
+    </div>
+
+    <!-- Основная карточка -->
+    <div class="book-card">
+
+      <!-- Обложка книги -->
+      <!-- 
+        ФОТО ОБЛОЖКИ:
+        Положи файл images/cover.jpg рядом с index.html
+        Размер: желательно 260x380 px (вертикальное)
+      -->
+      <div class="book-cover">
+        <img
+          src="img/cover.jpg"
+          alt="Обложка книги Мир Карика"
+          class="book-cover__img"
+        />
+        <!-- Заглушка если нет фото -->
+        <div class="book-cover__placeholder">
+          <div class="placeholder-series">АНТОН ЕМЕЛЬЯНОВ<br>СЕРГЕЙ САВИНОВ</div>
+          <div class="placeholder-bird">🦅</div>
+          <div class="placeholder-title">МИР<br>КАРИКА</div>
+          <div class="placeholder-num">КНИГА 14</div>
+        </div>
+      </div>
+
+      <!-- Информация о книге -->
+      <div class="book-info">
+
+        <h1 class="book-info__title">Утро ворона</h1>
+        <p class="book-info__author">Сергей Савинов</p>
+
+        <!-- Рейтинг звёздами -->
+        <div class="book-info__stars">
+          <span class="star star--filled">★</span>
+          <span class="star star--filled">★</span>
+          <span class="star star--filled">★</span>
+          <span class="star star--filled">★</span>
+          <span class="star star--filled">★</span>
+          <span class="stars-label">5.0</span>
+        </div>
+
+        <!-- Описание -->
+        <p class="book-info__desc">
+          Когда-то основой мира были три силы: демиург и два его врага,
+          один явный, а другой тайный. Но после того, как Карик захватил
+          власть, равновесие было нарушено. Кто и как это сделал —
+          неизвестно. Есть силы, которые хотят всё исправить, есть те,
+          кто гонит мироздание в пропасть хаоса, а есть… Кот! И у него,
+          в свою очередь, достаточно мозгов, а также стихий Зла, Обмана
+          и, возможно, Смерти. А ещё у него отсутствует какое-либо
+          желание плясать под чужие дудки.
+        </p>
+
+        <!-- Кнопки -->
+        <div class="book-info__actions">
+          <button class="btn-primary">Читать</button>
+          <button class="btn-outline">В избранное ♡</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #111;
+}
+
+/* ── TOP HEADER ── */
+.top-header {
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* Left — phone */
+.phone-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.phone-icon {
+  font-size: 20px;
+  margin-top: 2px;
+  color: #ccc;
+}
+
+.phone-number {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.callback {
+  font-size: 12px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.callback-dot {
+  width: 6px;
+  height: 6px;
+  background: #888;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Center — logo */
+.logo-block {
+  text-align: center;
+  flex: 1;
+}
+
+.logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #fff;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Right — address + search */
+.right-block {
+  text-align: right;
+  min-width: 240px;
+}
+
+.address {
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #444;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.search-box input {
+  flex: 1;
+  background: #1c1c1c;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: #888;
+  font-family: 'Raleway', sans-serif;
+}
+
+.search-box input::placeholder {
+  color: #555;
+}
+
+.search-btn {
+  background: #1c1c1c;
+  border: none;
+  border-left: 1px solid #444;
+  padding: 7px 10px;
+  cursor: pointer;
+  color: #888;
+  font-size: 14px;
+}
+
+.search-btn:hover {
+  color: #fff;
+}
+
+/* ── NAV ── */
+nav {
+  background: #111;
+  border-top: 1px solid #2a2a2a;
+  padding: 0 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 14px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li:first-child a {
+  padding-left: 0;
+}
+
+.nav-home {
+  font-size: 16px;
+}
+
+.nav-cart a {
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}

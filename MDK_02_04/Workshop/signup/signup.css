@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #444;
+}
+
+/* Фон страницы — тёмное фото города (имитация через градиент) */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(50,50,50,0.82), rgba(30,30,30,0.92)),
+              url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ── FORM BOX ── */
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 36px 36px;
+}
+
+/* ── TABS ── */
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.tab {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #888;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.tab:hover {
+  color: #ccc;
+}
+
+.tab.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* ── FORM ── */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.field-group input {
+  width: 100%;
+  padding: 13px 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  outline: none;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── BUTTON ── */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  background: #777;
+  border: none;
+  border-radius: 30px;
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #555;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 4px 0;
+}
+
+/* ── ALREADY MEMBER ── */
+.already {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
